@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact Mountainside Resort and Spa</title>
+        <meta name="author" content="May Giacinto">
+        <meta name="description" content="Contact page for Mountainside Resort and Spa">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!-- Favicon -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+        <!-- Google Fonts Links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+        <!-- stylesheet -->
+        <!-- TO DO: Link to your stylesheet -->
+         <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section id="contact">
+        <header>
+            <div class="hero-image">
+                <div class="hero-text">
+                    <h1><a href=index.html>Mountainside Resort and Spa</a></h1>
+                    <nav>
+                        <ul>
+                            <li><a href=index.html>Home</a></li>
+                            <li><a href=#placeholder>Accommodations</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </header>
+        <main>
+            <h2>Contact Us</h2>
+            <p>Please reach out to us with any questions or concerns. 
+                We are happy to help you plan your dream vacation with us!
+                Required fields marked with a <span class="required">*</span></p>
+            <img id="conimage" src="images/swiss-sunset.jpg" alt="swiss sunset">
+
+            <form id="form">
+                <section id="left">
+                    <label for="name">Full Name:<span class="required">*</span></label><br>
+                    <input type="text" id="name" name="name" required><br>
+
+                    <label for="email">Email Address:<span class="required">*</span></label><br>
+                    <input type="text" id="email" name="email" required><br>
+
+                    <label for="phone">Phone Number:<span class="required">*</span></label><br>
+                    <input type="tel" id="phone" name="phone" required><br>
+
+                </section>
+                <section id="right">
+                    <fieldset>
+                        <legend>Preferred Contact Method<span class="required">*</span></legend>
+
+                        <div class="radio-row">
+                            <input type="radio" id="prefemail" name="method" value="Email" required>
+                            <label id="pe" for="prefemail">Email</label>
+                        </div>
+
+                        <div class="radio-row">
+                            <input type="radio" id="prefphone" name="method" value="Phone" required>
+                            <label id="ph" for="prefphone">Phone</label>
+                        </div>
+                    </fieldset>
+
+                    <label for="comments">Comments:<span class="required">*</span></label><br>
+                    <textarea id="comments" name="comments" required></textarea><br>
+
+                    <input type="submit" value="Submit">
+                </section>
+            </form>
+
+        </main>
+        <footer>
+            <p>Copyright &copy;2023 - Mountainside Resort and Spa</p>
+            <p>This site is for educational purposes only</p>
+        </footer>
+        </section>
+
+    </body>

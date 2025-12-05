@@ -1,0 +1,355 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+        /*colors*/
+    --pale-mint: #CAD2C5;
+    --mint: #84A98C;
+    --teal: #52796F;
+    --dk-teal: #354F52;
+    --navy: #2F3E46;
+    --white: #fff;
+    --lt-grey: #e0e1dd;
+
+    /*fonts*/
+    /* Font Stack */
+    /* 
+        regular weight: 400
+        semi-bold: 600
+        extra-bold: 800
+    */
+    --font: "Merriweather", serif;
+    --secfont: "Lora", serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header, main, footer {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+html, body {
+    background-color: var(--teal);
+}
+
+main {
+    background-color: var(--lt-grey);
+    width: 90%;
+    border-left: 1rem solid var(--pale-mint);
+    border-right: 1rem solid var(--pale-mint);
+    padding: 2rem;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem 2rem 0 2rem;
+    font-size: 3rem;
+    font-family: var(--font);
+    opacity: 80%;
+}
+
+h1 a {
+    text-decoration: none;
+    color: black;
+    opacity: 80%;
+}
+
+.hero-image {
+    background-image: url(images/swiss-valley.jpg);
+    width: 100%;
+    max-width: 1280px;
+    height: 20rem;
+    margin: 0 auto;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 2rem 1rem 5rem;
+    margin: 0;
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: var(--lt-grey);
+    border: 3px solid var(--navy);
+    background-color: var(--dk-teal);
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-family: var(--secfont);
+}
+
+nav a:hover {
+    border-color: var(--teal);
+    background-color: var(--navy);
+    color: var(--lt-grey);
+}
+
+nav a:focus {
+    border-color: var(--teal);
+    background-color: var(--lt-grey);
+    color: var(--navy);
+}
+
+p {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 2rem;
+    line-height: 2rem;
+    font-family: var(--secfont);
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--font);
+    opacity: 80%;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-family: var(--font);
+    opacity: 80%;
+}
+
+#cols {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#cols > .card {
+    display: flex;
+    width: 45%;
+    min-width: 500px;
+    flex-wrap: wrap;
+}
+
+#cols img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;  
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#conimage {
+    margin: 0 auto;
+    display: block;
+    width: 80%; 
+}
+
+footer p{
+    font-size: 1rem;
+    padding: 0.75rem;
+    background-color: #52796F;
+    color: var(--lt-grey)
+}
+
+
+/* Two-column layout */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding-top: 2rem;
+    align-items: start;
+    justify-content: start;
+}
+
+#form {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+#left {
+    grid-column: 1/2;
+    border: 5px solid var(--pale-mint);
+    border-right: 0;
+    padding: 2rem;
+    margin-right: 0;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+#right {
+    grid-column: 2/2;
+    border: 5px solid var(--pale-mint);
+    padding: 2rem;
+    margin-left: 0;
+    gap: 2rem;
+}
+
+#name, #email, #phone {
+    margin: .5rem 0;
+}
+
+form label {
+    font-size: 1.25rem;
+    padding: .4rem;
+    font-family: var(--secfont);
+    font-weight: 500;
+}
+
+#ph, #pe {
+    font-size: 1.1rem;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+textarea {
+    padding: 0.7rem;
+    border: 2px solid var(--mint);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--white);
+}
+
+
+fieldset {
+    border: 2px solid var(--pale-mint);
+    padding: 1rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+legend {
+    font-size: 1.25rem;
+	font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-family: var(--secfont);
+}
+
+.radio-row {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.radio-row input[type="radio"] {
+    appearance: none;
+    cursor: pointer;
+    margin: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 2px solid var(--navy);
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Inner filled circle when selected */
+.radio-row input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: var(--dk-teal);
+    border-radius: 50%;
+}
+
+
+
+#comments {
+    height: 8rem;
+    margin: .5rem 0 1rem 0;
+}
+
+input[type="submit"] {
+    grid-column: 1 / -1;        
+    justify-self: center;
+    padding: 0.75rem 2rem;
+    color: var(--lt-grey);
+    background-color: var(--dk-teal);
+    border: 3px solid var(--navy);
+    border-radius: 50px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--navy);
+}
+
+.required {
+    color: var(--navy)
+}
